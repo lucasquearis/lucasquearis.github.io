@@ -6,39 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Lucas A. Santos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style>
+        #github {
+            border-radius: 50%
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Índice:</h2>
-    <ol>
-        <li><a href="#apresentacao">Minha Apresentação.</a></li>
-        <li><a href="#habilidades"> Minhas Habilidades.</a></li>
-        <li><a href="#linkedin">Meu Linkedin</a></li>
-        <li><a href="#github">Meus projetos no Github</a></li>
-    </ol>
-    <hr>
-    <h1 id="apresentacao">Lucas de Almeida Santos</h1>
-    <a href="imagens/imgperfil.jpeg"title="Minha Foto"><img src="imagens/imgperfil.jpeg" alt="Foto de Lucas"width="200px"></a>
-    <p>Oi, meu nome é <em>Lucas</em>, sou apaixonado por <strong>técnologias e natureza</strong>, adoro fazer trilhas e descobrir lugares novos, inclusive tirei essa foto no <strong><a href="https://buracodopadre.com.br/" target="_blank" alt="link para o parque buraco do padre">Parque Buraco do Padre</a></strong>, uma trilha muito Top!</p> <p>Sou aluno da Trybe, faço parte da turma 12. Sou brasileiro e atualmente moro em <strong>São José dos Pinhais, no Paraná.</strong></p>
-    <hr>
-    <h3 id="habilidades">Minhas Hábilidades:</h3>
-    <h4>Hard Skills:</h4>
-    <ul>
-        <li><strong>HTML</strong></li>
-        <li><strong>Git e Github</strong></li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-    <h4>Soft Skills:</h4>
-    <ul>
-        <li><strong>Reflexivo</strong></li>
-        <li><strong>Facilidade</strong></li>
-        <li>Planejamento</li>
-        <li>Organização</li>
-    </ul>
-    <hr>
-    <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/lucasquearis/">Meu Linkedin!</a>
-    <img src="imagens/imglinkedinmobile.png" alt="Imagem do perfil Linkedin">
-    <br><a id="github" target="_blank" href="https://github.com/lucasquearis">Meu Github!</a>
+    <div id="menu" class="menu">
+        <ul>
+        <a href="https://lucasquearis.github.io"><li>Home</li></a>
+        <a href="#header"><li>Quem sou EU?</li></a>
+        <a href="#habilidade"><li>Habilidades</li></a>
+        <a href="#contato"><li>Contatos</li></a>
+        </ul>
+    </div>
+    <a href="imagens/imagemperfil.jpg"title="Minha Foto"><img class="imgperfil" src="imagens/imagemperfil.jpg" alt="Foto de Lucas"></a>
+    <div id="header" class="header">
+        <h1 id="apresentacao">Quem sou EU?</h1>
+        <p>Meu nome é <strong>Lucas de Almeida Santos</strong>, moro atualmente em <strong>São José dos Pinhais, no Paraná</strong> sou estudante da <span class="trybe">Trybe, turma 12. Sou apaixonado por técnologia, amante de jogos e interatividades online vou me tornar um programador desenvolvedor web, conforme eu for aprendendo novas técnicas de programação, irei atualizando esse portfólio, fique à vontade para me conhecer melhor.</span></p>
+    </div>
+    <div id="habilidade" class="habilidade">
+        <h3 id="habilidades">Minhas Habílidades:</h3>
+        <h4>Hard Skills:</h4>
+        <ul>
+            <li><strong>HTML</strong></li>
+            <li><strong>Git e Github</strong></li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <h4>Soft Skills:</h4>
+        <ul>
+            <li><strong>Reflexivo</strong></li>
+            <li><strong>Facilidade</strong></li>
+            <li>Planejamento</li>
+            <li>Organização</li>
+        </ul>
+    </div>
+    <div id="contato" class="contato">
+        <h1>Me siga nas minhas redes:</h1>
+        <ul>
+            <li><a href="https://github.com/lucasquearis" target="_blank"><img id="github" src="imagens/017-github.png" alt="icone github"></a></li>
+            <li><a href="https://www.linkedin.com/in/lucasquearis/" target="_blank"><img src="imagens/010-linkedin.png" alt="icone linkedin"></a></li>
+            <li><a href="https://www.facebook.com/lucasquearis/" target="_blank"><img src="imagens/001-facebook.png" alt="icone facebook"></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=554196802945" target="_blank"><img src="imagens/003-whatsapp.png" alt="icone whatsapp"></a></li>
+            <li><a href="https://www.instagram.com/lucasquearis/" target="_blank"><img src="imagens/011-instagram.png" alt="icone instagram"></a></li>
+        </ul>
+    </div>
+
 
 </body>
 </html>
