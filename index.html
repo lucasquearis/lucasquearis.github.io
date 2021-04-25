@@ -4,58 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Lucas A. Santos</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <style>
-        #github {
-            border-radius: 50%
-        }
-    </style>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Portfólio Lucas de Almeida Santos</title>
 </head>
 <body>
-    <div id="menu" class="menu">
-        <ul>
-        <a href="https://lucasquearis.github.io"><li>Home</li></a>
-        <a href="#header"><li>Quem sou EU?</li></a>
-        <a href="#habilidade"><li>Habilidades</li></a>
-        <a href="#contato"><li>Contatos</li></a>
-        </ul>
-    </div>
-    <a href="imagens/imagemperfil.jpg"title="Minha Foto"><img class="imgperfil" src="imagens/imagemperfil.jpg" alt="Foto de Lucas"></a>
-    <div id="header" class="header">
-        <h1 id="apresentacao">Quem sou EU?</h1>
-        <p>Meu nome é <strong>Lucas de Almeida Santos</strong>, moro atualmente em <strong>São José dos Pinhais, no Paraná</strong> sou estudante da <span class="trybe">Trybe, turma 12. Sou apaixonado por técnologia, amante de jogos e interatividades online vou me tornar um programador desenvolvedor web, conforme eu for aprendendo novas técnicas de programação, irei atualizando esse portfólio, fique à vontade para me conhecer melhor.</span></p>
-    </div>
-    <div id="habilidade" class="habilidade">
-        <h3 id="habilidades">Minhas Habílidades:</h3>
-        <h4>Hard Skills:</h4>
-        <ul>
-            <li><strong>HTML</strong></li>
-            <li><strong>Git e Github</strong></li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-        <h4>Soft Skills:</h4>
-        <ul>
-            <li><strong>Reflexivo</strong></li>
-            <li><strong>Facilidade</strong></li>
-            <li>Planejamento</li>
-            <li>Organização</li>
-        </ul>
-    </div>
-    <div id="contato" class="contato">
-        <h1>Me siga nas minhas redes:</h1>
-        <ul>
-            <li><a href="https://github.com/lucasquearis" target="_blank"><img id="github" src="imagens/017-github.png" alt="icone github"></a></li>
-            <li><a href="https://www.linkedin.com/in/lucasquearis/" target="_blank"><img src="imagens/010-linkedin.png" alt="icone linkedin"></a></li>
-            <li><a href="https://www.facebook.com/lucasquearis/" target="_blank"><img src="imagens/001-facebook.png" alt="icone facebook"></a></li>
-            <li><a href="https://api.whatsapp.com/send?phone=554196802945" target="_blank"><img src="imagens/003-whatsapp.png" alt="icone whatsapp"></a></li>
-            <li><a href="https://www.instagram.com/lucasquearis/" target="_blank"><img src="imagens/011-instagram.png" alt="icone instagram"></a></li>
-        </ul>
+    <header class="header">
+        <img class="minhafoto" src="imagens/fotoperfil.jpg" alt="Foto de Lucas">
+
+        <article class="article">
+            <h3>Meu Aprendizado:</h3>
+            <p>Todo dia aqui na Trybe é um dia que vale muito! Todos os dias temos dinâmicas, conversas, conteúdos novos com ótimos profissionais. Com a didática tão boa fica muito mais fácil aprender coisas novas.
+            A cada dia que passa, aprendemos tanta coisa nova que olhar as nossas atividades do dia anterior dá orgulho de ver o tanto que você aprendeu em tão pouco tempo, aqui realmente vemos nossa evolução é isso é MUITO BOM!</p>
+        </article>
+
+        <section class="lista_aprendida">
+            <h2>Lições Aprendidas:</h2>
+            <ol id="licoes_aprendidas">
+                <li>Unix</li>
+                <li>Bash</li>
+                <li>Git</li>
+                <li>Github</li>
+                <li>Internet</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Conversação</li>
+                <li>Inteligência Emocional</li>
+                <li>Trabalho em Equipe</li>
+            </ol>
+        </section>
+    </header>
+
+    <div id="cabecalho">
+        <h1 id="titulo"> <span id="lucas">Lucas de Almeida Santos.</span></h1>
     </div>
 
+    <div class="segundaparte">
+        <aside class="aside">
+            <h3>Um pouco mais...</h3>
+            <p>
+                A Trybe possui um método chamado Sucesso Compartilhado, um método que o aluno só paga o curso à partir do momento que ele conseguir um emprego na área de programação.
+            </p>
+        </aside>
+        <div>    
+            <section class="lista_a_aprender">
+                <h2>Lições que ainda vou aprender:</h2>
+                <ul class="licoes_a_aprender">
+                    <li>JavaScript</li>
+                    <li>Lógica de Programação</li>
+                    <li>Dom</li>
+                    <li>Web Storage</li>
+                    <li>Soft Skills</li>
+                    <li>Python</li>
+                    <li>Sites Responsivos</li>
+                    <li>Flexbox</li>
+                    <li>Higher Order Functions</li>
+                    <li>Jest</li>
+                </ul>
+            </section>
+        </div>
+    </div>
 
+    <div class="terceiraparte">
+        <table class="tabela">
+            <tr>
+                <th class="errado">&#128543Errado</th>
+                <th class="correto">&#128513Correto</th>
+            </tr>
+            <tr>
+                <td>Salsicha</td>
+                <td>Vina</td>
+            </tr>
+            <tr>
+                <td>Menino</td>
+                <td>Piá</td>
+            </tr>
+            <tr>
+                <td>Estojo</td>
+                <td>Penal</td>
+            </tr>
+            <tr>
+                <td>Biscoito</td>
+                <td>Bolacha</td>
+            </tr>
+        </table>
+    
+    </div>
+
+    <footer id="rodape" class="rodape">
+        <a href="#"><img class="img" src="imagens/010-linkedin.png" alt="Icone Linkedin"></a>
+        <p>Me Adicione no Linkedin!!</p>
+    </footer>
 </body>
 </html>
