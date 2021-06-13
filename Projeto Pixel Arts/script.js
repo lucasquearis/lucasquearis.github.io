@@ -12,9 +12,7 @@ const createTable = document.createElement('table');
 const createPallet = () => {
   createTable.id = 'color-palette';
   selectBody.appendChild(createTable);
-
   const selectTable = document.getElementById('color-palette');
-
   for (let index = 1; index < 5; index += 1) {
     const createTh = document.createElement('th');
     selectTable.appendChild(createTh);
@@ -80,18 +78,27 @@ const selectColorPalltet = () => {
   });
 };
 
+const pickupColor = () => {
+  const pickupSelectedColor = document
+    .querySelector('.selected').style.backgroundColor;
+  const condicao = pickupSelectedColor === '';
+  return (condicao) ? 'black' : pickupSelectedColor;
+};
+// Nao estava conseguindo usar o getElement pois retornava uma HTMLCollection e nao uma array, descobri uma solucao aqui;
+// https://stackoverflow.com/questions/222841/most-efficient-way-to-convert-an-htmlcollection-to-an-array
 const squarePaint = () => {
-  const pickupSquare = document.querySelectorAll('.pixel');
-  pickupSquare.forEach((square) => {
+  const pickupSquare = document.getElementsByClassName('pixel');
+  [...pickupSquare].forEach((square) => {
     square.addEventListener('click', (event) => {
       const click = event;
-      const pickupColor = window.getComputedStyle(document
-        .querySelector('.selected')).getPropertyValue('background-color');
-      const condicao = click.target.style.backgroundColor === pickupColor;
+      console.log('ta correndo');
+      const condicao = click.target.style.backgroundColor === pickupColor();
       if (condicao) {
         click.target.removeAttribute('style');
+        console.log('altera cor');
       } else {
-        click.target.style.backgroundColor = pickupColor;
+        click.target.style.backgroundColor = pickupColor();
+        console.log('tentando pintar');
       }
     });
   });
@@ -148,6 +155,7 @@ const submitButton = () => {
         catchInputValue = 50;
       }
       criarQuadrado(catchInputValue);
+      squarePaint();
     }
   });
 };
@@ -166,7 +174,15 @@ const randomPalletColors = () => {
   selectPallet2.style.backgroundColor = randomNumber();
   selectPallet3.style.backgroundColor = randomNumber();
   selectPallet4.style.backgroundColor = randomNumber();
-  console.log(randomNumber());
+};
+
+const randomButton = () => {
+  const newButton = document.createElement('button');
+  newButton.id = 'random-button';
+  newButton.innerText = 'Mudar Cores';
+  const selectPallet = document.querySelector('#color-palette');
+  selectPallet.insertAdjacentElement('beforebegin', newButton);
+  newButton.addEventListener('click', () => randomPalletColors());
 };
 
 window.onload = () => {
@@ -176,8 +192,10 @@ window.onload = () => {
   criarQuadrado(5);
   selectColorPalltet();
   squarePaint();
+  pickupColor();
   createButton();
   createInput();
   submitButton();
   randomPalletColors();
+  randomButton();
 };
