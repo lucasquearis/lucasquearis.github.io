@@ -1,17 +1,24 @@
-// Exercício 1
 const selectBody = document.getElementById('body');
+
+const createMain = () => {
+  const main = document.createElement('main');
+  main.className = 'main';
+  selectBody.appendChild(main);
+};
 
 const createTitle = () => {
   const createH1 = document.createElement('h1');
   createH1.innerHTML = 'Paleta de Cores';
   createH1.id = 'title';
-  selectBody.appendChild(createH1);
+  const selectMain = document.querySelector('.main');
+  selectMain.appendChild(createH1);
 };
 
 const createTable = document.createElement('table');
 const createPallet = () => {
+  const selectMain = document.querySelector('.main');
   createTable.id = 'color-palette';
-  selectBody.appendChild(createTable);
+  selectMain.appendChild(createTable);
   const selectTable = document.getElementById('color-palette');
   for (let index = 1; index < 5; index += 1) {
     const createTh = document.createElement('th');
@@ -49,9 +56,10 @@ const clearSquares = () => {
 };
 
 const criarQuadrado = (numb) => {
+  const selectMain = document.querySelector('.main');
   const createQuadrado = document.createElement('table');
   createQuadrado.id = 'pixel-board';
-  selectBody.appendChild(createQuadrado);
+  selectMain.appendChild(createQuadrado);
   forQuadrado(numb);
 };
 
@@ -107,6 +115,7 @@ const squarePaint = () => {
 const createButton = () => {
   const newButton = document.createElement('button');
   newButton.id = 'clear-board';
+  newButton.className = 'btn clear';
   newButton.innerText = 'Limpar';
   const selectPallet = document.querySelector('#color-palette');
   selectPallet.insertAdjacentElement('afterend', newButton);
@@ -125,6 +134,7 @@ const populateDiv = () => {
   newInput.setAttribute('type', 'number');
   newInput.id = 'board-size';
   newButton.id = 'generate-board';
+  newButton.className = 'btn vqv';
   newButton.innerText = 'VQV';
   newInput.setAttribute('max', 50);
   newInput.setAttribute('min', 1);
@@ -180,12 +190,14 @@ const randomButton = () => {
   const newButton = document.createElement('button');
   newButton.id = 'random-button';
   newButton.innerText = 'Mudar Cores';
+  newButton.className = 'btn change';
   const selectPallet = document.querySelector('#color-palette');
   selectPallet.insertAdjacentElement('beforebegin', newButton);
   newButton.addEventListener('click', () => randomPalletColors());
 };
 
-window.onload = () => {
+window.onload = async () => {
+  createMain();
   createTitle();
   createPallet();
   classnameForPallet();
@@ -196,6 +208,6 @@ window.onload = () => {
   createButton();
   createInput();
   submitButton();
-  randomPalletColors();
-  randomButton();
+  await randomPalletColors();
+  await randomButton();
 };
