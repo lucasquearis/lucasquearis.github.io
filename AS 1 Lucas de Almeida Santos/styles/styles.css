@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+/* Palheta Cores */
+:root {
+  --main-color-1: #E1C1DB;
+  --main-color-2: #F2F2F2;
+  --main-color-3: #A4B8BF;
+  --main-color-4: #A29A83;
+  --main-color-5: #262624;
+  --main-error: rgb(255, 85, 85);
+  --main-success: rgb(47, 131, 47);
+}
+
+body {
+  background-color: white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Prompt', sans-serif;
+}
+
+.container, .nav-header ul {
+  max-width: 1440px;
+  margin: auto;
+}
+
+header {
+  background-color: var(--main-color-4);
+}
+
+.nav-header ul {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-item {
+  color: var(--main-color-5);
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.1s ease-out 100ms;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.nav-item:hover {
+  color: var(--main-color-1);
+}
+footer {
+  position: fixed;
+  padding: 20px;
+  background-color: var(--main-color-4);
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 30px;
+  min-height: 80vh;
+  margin-bottom: 80px;
+}
+
+.todo-list {
+  max-width: 80%;
+}
+
+.todo-list li {
+  list-style-position: inside;
+  padding-left: 25px;
+  margin-bottom: 5px;
+}
+
+.riscado {
+  text-decoration: line-through;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container-form {
+  background-color: var(--main-color-2);
+  max-width: 600px;
+  min-height: 200px;
+  padding: 28px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  gap: 10px 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-cell {
+  width: 45%;
+}
+
+.title-form {
+  width: 100%;
+  flex-shrink: 0;
+  color: #262624;
+}
+
+.form-label {
+  color: var(--main-color-1);
+  transition: 0.5s;
+}
+
+.form-label textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form-label #nameProfessor, #name, #tecnologia, #nota, #comentario, #password {
+  color: var(--main-color-5)
+}
+
+.form-cell .form-label input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 1px solid var(--main-color-1);
+}
+
+.form-cell .form-label input, textarea, select {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--main-color-1);
+}
+
+.radio-content {
+  display: flex;
+  gap: 18px;
+  color: var(--main-color-5);
+}
+
+.form-cell.button {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+
+.submit-button {
+  width: 100%;
+  height: max-content;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--main-color-1);
+  background-color: var(--main-color-1);
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--main-color-2)
+}
+
+.back-button {
+  margin-top: 30px;
+  width: 100%;
+  height: max-content;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--main-color-1);
+  background-color: var(--main-color-1);
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--main-color-2)
+}
+
+.back-button:hover {
+  opacity: 0.5;
+}
+
+.submit-button:hover {
+  opacity: 0.5;
+}
+
+.submit-button:focus-visible {
+  outline: 1px solid var(--main-color-1);
+}
+
+
+.clear-button {
+  width: 100%;
+  height: max-content;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--main-error);
+  background-color: var(--main-error);
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--main-color-2)
+}
+
+.clear-button:hover {
+  opacity: 0.5;
+}
+
+.clear-button:focus-visible {
+  outline: 1px solid var(--main-error);
+}
+
+.required {
+  color: var(--main-error)
+}
+
+.required-text {
+  font-size: 10px;
+  color: var(--main-error);
+  list-style-position: inside;
+}
+
+.success-text {
+  font-size: 10px;
+  color: var(--main-success);
+  text-decoration: line-through;
+}
+
+.container-about {
+  background-color: var(--main-color-2);
+  max-width: 600px;
+  min-height: 200px;
+  padding: 28px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--main-color-5)
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.video-container img {
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 650px) {
+  .container-form {
+    flex-direction: column;
+  }
+
+  .form-cell {
+    width: 100%;
+  }
+}

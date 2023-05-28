@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <title>Atividade Somativa 1 - Lucas A. Santos</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav-header">
+        <ul>
+          <li>
+            <img
+              src="../images/brasão_puc.png"
+              width="50px"
+              alt="brasão pucpr"
+            />
+          </li>
+          <li><a class="nav-item" href="/">Home</a></li>
+          <li><a class="nav-item" href="form.html">Cadastro</a></li>
+          <li><a class="nav-item" href="about.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container form">
+      <form class="container-form" action="formAction.html">
+        <div class="title-form">
+          <h1>Avalie meu trabalho :&#41;</h1>
+        </div>
+        <div class="form-cell">
+          <label class="form-label">
+            Nome professor:
+            <input
+              name="nameProfessor"
+              placeholder="Nome com 5 a 50 letras"
+              pattern="[A-Za-záàâãéèêíóôõúç\s]{5,50}"
+              required
+              title="É necessário atribuir um nome ao professor de 5 a 50 caracteres"
+            />
+          </label>
+        </div>
+        <div class="form-cell">
+          <label class="form-label">
+            Nome aluno:
+            <input
+              value="Lucas de Almeida Santos"
+              name="name"
+              placeholder="Nome com 5 a 50 letras"
+              pattern="[A-Za-záàâãéèêíóôõúç\s]{5,50}"
+              required
+              title="É necessário atribuir um nome ao aluno de 5 a 50 caracteres"
+            />
+          </label>
+        </div>
+        <div class="form-cell">
+          <label class="form-label"> Tecnologia favorita da matéria: </label>
+          <div class="radio-content">
+            <label class="radio-label">
+              <input type="radio" name="tecnologia" value="html" required />
+              HTML
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="tecnologia" value="css" required />
+              CSS
+            </label>
+            <label class="radio-label">
+              <input
+                type="radio"
+                name="tecnologia"
+                value="javascript"
+                required
+                checked
+              />
+              JavaScript
+            </label>
+          </div>
+        </div>
+        <div class="form-cell">
+          <label class="form-label">
+            Avaliação:
+            <select required name="nota" title="É necessário aplicar uma nota">
+              <option value="">Selecione uma opção</option>
+              <option value="10">Página 10!</option>
+              <option value="7">Página Ok</option>
+              <option value="4">Página +/-</option>
+              <option value="0">Página não Ok</option>
+            </select>
+        </div>
+        <div class="form-cell">
+          <label class="form-label">
+            Deixe um comentário:
+            <textarea
+              name="comentario"
+              placeholder="Comentário: bla bla..."
+              maxlength="100"
+            ></textarea>
+          </label>
+        </div>
+        <div class="form-cell">
+          <label class="form-label">
+            Senha professor:
+            <input
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&*]).{6,20}"
+              required
+              name="password"
+              type="password"
+              autocomplete
+              placeholder="Exemplo: Abc@123"
+              title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 6 ou mais caracteres com caracteres especiais."
+            />
+          </label>
+        </div>
+        <div class="form-cell button">
+          <button type=reset class="clear-button">Limpar Campos</button>
+        </div>
+        <div class="form-cell button">
+          <button type="submit" class="submit-button">Enviar avaliação</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p>Desenvolvido com carinho por Lucas A. Santos</p>
+    </footer>
+    <script src="../scripts/form.js"></script>
+  </body>
+</html>
